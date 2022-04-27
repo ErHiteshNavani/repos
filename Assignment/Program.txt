@@ -1,0 +1,93 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assignment
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            IReader reader = new FileReader();
+            string fileData = reader.read();
+            
+            IParser<int> parser = new IntParser();
+            IEnumerable<int> ints= parser.parse(fileData);
+
+            IOperation<int> operation = new AddOperation();
+            int output = operation.operate(ints);
+
+            IWriter<string> op = new ConsolWriter();
+            op.Send(output.ToString());
+
+            Console.ReadKey();
+        }
+    }
+
+    interface IReader
+    {
+        string read();
+    }
+
+    class FileReader : IReader
+    {
+        public string read()
+        {
+            return File.ReadAllText(@"C:\Users\hitesh\source\repos\Assignment\input.txt");
+        }
+    }
+
+    interface IParser<T>
+    {
+        IEnumerable<T> parse(string input);
+    }
+
+    class IntParser : IParser<int>
+    {
+        public IEnumerable<int> parse(string input)
+        {
+            var strings = input.Split(',');
+
+            foreach (string s in strings)
+            {
+                yield return int.Parse(s);
+            }
+        }
+    }
+
+    interface IOperation<T>
+    {
+        T operate(IEnumerable<T> inputs);
+    }
+
+    class AddOperation : IOperation<int>
+    {
+        public int operate(IEnumerable<int> inputs)
+        {
+            int op = 0;
+            foreach (int item in inputs)
+            {
+                op += item;
+            }
+
+            return op;
+        }
+    }
+
+    interface IWriter<T>
+    {
+        void Send(T output);
+    }
+
+    class ConsolWriter : IWriter<string>
+    {
+        public void Send(string s)
+        {
+            Console.WriteLine(s);
+        }
+    }
+}

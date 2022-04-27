@@ -1,0 +1,6 @@
+C:\Users\hitesh\source\repos\IO\bin\Debug\IO.dll
+C:\Users\hitesh\source\repos\IO\bin\Debug\IO.pdb
+C:\Users\hitesh\source\repos\IO\obj\Debug\IO.csproj.AssemblyReference.cache
+C:\Users\hitesh\source\repos\IO\obj\Debug\IO.csproj.CoreCompileInputs.cache
+C:\Users\hitesh\source\repos\IO\obj\Debug\IO.dll
+C:\Users\hitesh\source\repos\IO\obj\Debug\IO.pdb

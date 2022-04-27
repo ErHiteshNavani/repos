@@ -1,0 +1,6 @@
+C:\Users\hitesh\source\repos\Operations\obj\Debug\Operations.csproj.AssemblyReference.cache
+C:\Users\hitesh\source\repos\Operations\obj\Debug\Operations.csproj.CoreCompileInputs.cache
+C:\Users\hitesh\source\repos\Operations\bin\Debug\Operations.dll
+C:\Users\hitesh\source\repos\Operations\bin\Debug\Operations.pdb
+C:\Users\hitesh\source\repos\Operations\obj\Debug\Operations.dll
+C:\Users\hitesh\source\repos\Operations\obj\Debug\Operations.pdb
